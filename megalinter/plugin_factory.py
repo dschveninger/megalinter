@@ -46,7 +46,7 @@ def load_plugin(plugin):
                 # From file://<path>, test both <path> and /tmp/lint/<path>
                 plugin_path = plugin.split("file://")[1]
                 if not os.access(plugin_path, os.R_OK):
-                    plugin_path = "/tmp/lint/" + plugin_path
+                    plugin_path = config.get("PLUGINS_FILE_DIRECTORY", "/tmp/lint/") + plugin_path
                     if not os.access(plugin_path, os.R_OK):
                         raise Exception(
                             f"[Plugins] Local plugin descriptor not found or not readable {plugin}"

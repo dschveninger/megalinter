@@ -7808,6 +7808,13 @@
       "title": "List of plugins loaded at runtime",
       "type": "array"
     },
+    "PLUGINS_FILE_DIRECTORY": {
+      "$id": "#/properties/PLUGINS_FILE_DIRECTORY",
+      "default": "/tmp/lint/",
+      "description": "PLUGINS_FILE_DIRECTORY: The base directory for file installed plugins in a container",
+      "title": "PLUGINS_FILE_DIRECTORY: Default directory for file based plugins",
+      "type": "string"
+    },
     "POST_COMMANDS": {
       "$id": "#/properties/POST_COMMANDS",
       "default": [],
